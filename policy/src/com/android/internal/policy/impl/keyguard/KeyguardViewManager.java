@@ -323,6 +323,7 @@ public class KeyguardViewManager {
 
     public boolean handleKeyUp(int keyCode, KeyEvent event) {
         if (mUnlockKeyDown) {
+            mUnlockKeyDown = false;
             switch (keyCode) {
                 case KeyEvent.KEYCODE_BACK:
                     if (mKeyguardView.handleBackKey()) {
